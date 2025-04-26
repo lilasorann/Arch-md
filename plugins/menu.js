@@ -10,7 +10,7 @@ const run  = function(seconds) {
   var sDisplay = s > 0 ? s + (s == 1 ? " s" : " s") : "";
   return dDisplay + hDisplay + mDisplay + sDisplay;
 }
-let { getDevice } = require('@whiskeysockets/baileys')
+let { getDevice } = require('baileys')
 let fs = require("fs")
 let os = require('os');
 let speed = require('performance-now');
@@ -38,7 +38,7 @@ let handler = async (m, { ednut, ednutdev, reply4 }) => {
 let timestampe = speed()
 let latensi = speed() - timestampe
 let me = m.sender
-let { getDevice } = require('@whiskeysockets/baileys')
+let { getDevice } = require('baileys')
   if (m.isGroup) {
 if (global.db.groups[m.chat].banned) return
 }
